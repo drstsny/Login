@@ -1,0 +1,83 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+.body{
+    height: 150vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.body1{
+    height: 100vh;
+    background-image:url("../assets/Covid-19.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+p {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    padding-top: 10px;
+}
+
+h3 {
+    text-align: center;
+    padding-left: 140px;
+    padding-bottom: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+a {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container1{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    padding: 20px 25px;
+    width: 450px;
+    height: 350px;
+    border-radius: 15px;
+    background-color: white;
+    
+}
+.container1 h3{
+    text-align: left;
+    color: pink;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    border-bottom: 4px solid pink;
+}
+.container1 label{
+    text-align: left;
+    color: pink;
+}
+.container1 form input{
+    width: calc(100% - 20px);
+    padding: 8px 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 2px solid pink;
+    color: pink;
+    font-size: 20px;
+}
+.container1 form button{
+    width: 100%;
+    height: 40px;
+    padding: 5px 0;
+    border: none;
+    background-color:pink;
+    font-size: 18px;
+    color: #fafafa;
+    border-radius: 20px;
+}
+.container1 p , a{
+    color: pink;
+}
