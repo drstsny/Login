@@ -1,14 +1,15 @@
 import axios from "axios";
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import "../style/Register.css";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const history = useHistory();
+  // eslint-disable-next-line no-unused-vars
+  const navigate = useNavigate();
 
   const login = async (e) => {
     e.preventDefault();
@@ -28,7 +29,8 @@ export default function Login() {
       });
 
       setTimeout(() => {
-        history.push("");
+        // navigate.push("")0;
+        window.location.href = "/customer"
       }, 1500);
     } catch (error) {
       Swal.fire({
@@ -43,7 +45,7 @@ export default function Login() {
   return (
     <div className="body1 md:text-base lg:h-100vh sm:text-sm">
       <div className="container1">
-        <h3>Login</h3>
+        <h2>Login</h2>
         <form onSubmit={login} method="POST">
           <label>Email</label>
           <br />
@@ -63,7 +65,7 @@ export default function Login() {
             type="password"
           />
           <br />
-          <button type="submit">Login</button>
+          <button type="submit"> Login</button>
           <p>
             Belum punya akun?
             <a href="/register" className="register-link "> Register</a>

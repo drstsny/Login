@@ -1,24 +1,29 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Routes , Route } from "react-router-dom";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
-// import Data from "./Pages/Databarang";
-// import Add from "./pages/Tambah";
-// import Edit from "./Pages/Edit";
-// import Detail from "./Pages/Detail";
+import Data from "./pages/Barang";
+import Add from "./pages/tambah";
+import Edit from "./pages/edit";
+import Detail from "./pages/detail";
+import LandingPage from "./component/Landing-page"
+import Customer from "./customer/Customer"
+
 
 const App = () => {
   return (
     <BrowserRouter>
-      <Switch>
-        <Route path="/register" component={Register} />
-        <Route path="/login" component={Login} />
-        {/* <Route path="/barang" component={Data} /> */}
-        {/* <Route path="/tambah" component={Add} />
-        <Route path="/edit/:id" component={Edit} />
-        <Route path="/detail" component={Detail} /> */}
-      </Switch>
+      <Routes>
+        <Route path="/register" element={<Register/>} />
+        <Route path="/login" element={<Login/>} />
+        <Route path="/barang" element={<Data/>} /> 
+        <Route path="/tambah" element={<Add/>} />
+        <Route path="/edit/:id" element={<Edit/>} />
+        <Route path="/detail" element={<Detail/>} />
+        <Route path="/landing-page" element={<LandingPage/>} />
+        <Route path="/customer" element={<Customer/>} />
+      </Routes>
     </BrowserRouter>
   );
 };

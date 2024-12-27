@@ -1,7 +1,7 @@
 import axios from "axios";
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import "../style/Register.css";
 
@@ -9,7 +9,7 @@ export default function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");                              
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const register = async (e) => {
     e.preventDefault();
@@ -29,7 +29,7 @@ export default function Register() {
       });
 
       setTimeout(() => {
-        history.push("/Login");
+        navigate.push("/Login");
       }, 2000);
     } catch (error) {
       console.log(error);
